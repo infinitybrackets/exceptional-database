@@ -1,0 +1,18 @@
+{
+    "name": "infinitybrackets/exceptional-database",
+    "description": "PHP ORM Core of Infinity Brackets for PHP MVC Core (infinitybrackets/php-mvc-core)",
+    "require": {
+        "infinitybrackets/php-mvc-core": "^1.0.10"
+    },
+    "autoload": {
+        "psr-4": {
+            "InfinityBrackets\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "John Vincent Bonza",
+            "email": "jayveeinfinity@gmail.com"
+        }
+    ]
+}
