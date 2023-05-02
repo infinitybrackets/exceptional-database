@@ -1,2 +1,2 @@
 # Infinity Brackets PHP MVC Core
-PHP MVC Core of Infinity Brackets enhanced project from freecodecamp.org
+PHP ORM Core of Infinity Brackets for PHP MVC Core (infinitybrackets/php-mvc-core)
