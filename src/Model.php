@@ -224,7 +224,7 @@ class Model extends MySQL {
      */
     public function CountWhere($column, $value, $custom = FALSE) {
         if($custom) {
-            return $this->CountTable($this->tbl, $column, $value);
+            return $this->CountTable($this->tbl, "WHERE `" . $column ."` = :in_" . $column, ['in_' . $column => $value]);
         } else {
             if(is_string($column)) {
                 return $this->CountTable($this->tbl, "WHERE `" . $column . "` = :in_" . $column, ['in_' . $column => $value]);
@@ -324,7 +324,7 @@ class Model extends MySQL {
      */
     public function Limit($limit = NULL, $offset = NULL, $data = NULL) {
         if(is_null($data)) {
-            $this->results = $this->Select("SELECT * FROM `" . $this->tbl . "` LIMIT " . $limit . (!is_null($offset) ? ' OFFSET ' . $offset : ''))->Get();
+            $this->results = $this->Query("SELECT * FROM `" . $this->tbl . "` LIMIT " . $limit . (!is_null($offset) ? ' OFFSET ' . $offset : ''))->Get();
             return $this;
         }
         $temp = [];
