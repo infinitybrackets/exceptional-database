@@ -102,7 +102,7 @@ class Model extends MySQL {
         $params = [];
         $condition = "WHERE ";
         if(is_string($column)) {
-            $condition .= $column . "` = :in_" . $column;
+            $condition .= "`" . $column . "` = :in_" . $column;
             $params['in_' . $column] = $value;
         } else if(is_array($column)) {
             $i = 0;
@@ -130,7 +130,7 @@ class Model extends MySQL {
         $params = [];
         $condition = "WHERE ";
         if(is_string($column)) {
-            $condition .= $column . "` = :in_" . $column;
+            $condition .= "`" . $column . "` = :in_" . $column;
             $params['in_' . $column] = $value;
         } else if(is_array($column)) {
             $i = 0;
@@ -158,7 +158,7 @@ class Model extends MySQL {
         $params = [];
         $condition = "WHERE ";
         if(is_string($column)) {
-            $condition .= $column . "` = :in_" . $column;
+            $condition .= "`" . $column . "` = :in_" . $column;
             $params['in_' . $column] = $value;
         } else if(is_array($column)) {
             $i = 0;
@@ -188,7 +188,7 @@ class Model extends MySQL {
         $params = [];
         $condition = "WHERE ";
         if(is_string($column)) {
-            $condition .= $column . "` = :in_" . $column;
+            $condition .= "`" . $column . "` = :in_" . $column;
             $params['in_' . $column] = $value;
         } else if(is_array($column)) {
             $i = 0;
